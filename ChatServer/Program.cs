@@ -13,7 +13,7 @@ namespace ChatServer
             var config = ConfigurationFactory.ParseString(configStr);
             var actorSystem = ActorSystem.Create("chat-server", config);
 
-            actorSystem.ActorOf<Bridge>("bridge");
+            actorSystem.ActorOf<Bridge>("bridge-on-server");
 
             Console.WriteLine("Server running and waiting...");
             Console.ReadLine();
